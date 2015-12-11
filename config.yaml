@@ -1,0 +1,10 @@
+options:
+  github_secret:
+    type: string
+    default:
+  github_client:
+    type: string
+    default:
+  drone_image:
+    type: string
+    default: drone/drone:0.4

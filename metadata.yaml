@@ -1,0 +1,22 @@
+name: drone
+summary: Juju deployed Drone CI service
+maintainers:
+    - Charles Butler <charles.butler@canonical.com>
+description: |
+  Drone CI is a docker based build system, tightly coupled with
+  git repositories to enable continuous Integration and continuous
+  delivery of applications. 
+tags:
+  - containers
+  - application
+  - continuous_integration
+  - continuous_delivery
+subordinate: false
+provides:
+  website:
+     interface: http
+payloads:
+  application:
+    type: docker
+  database:
+    type: docker

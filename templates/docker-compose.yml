@@ -1,0 +1,14 @@
+drone:
+  volumes:
+    - /var/lib/drone:/var/lib/drone
+    - /var/run/docker.sock:/var/run/docker.sock
+  env_file:
+    - drone.env
+  restart: always
+  ports:
+    - 80:8000
+  {%- if drone_image %}
+  image: {{ drone_image }}
+  {% else %}
+  image: drone/drone:0.4
+  {%- endif %}
